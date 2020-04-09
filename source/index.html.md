@@ -30,7 +30,6 @@ This is developers documentation about used APIs in Project 'GON'. Will be used 
 ###CloudCode script key
 UNIT_UPGRADE
 
-
 ### Request Parameters
 
 Parameter | Value Type | Description
@@ -39,53 +38,21 @@ unitId | int | Unit unique id
 
 ### Response Parameters
 
-* unitId : (Dictionary<int, Dictionary<string, object>>) | keys
+* unitId : (Dictionary/<int, Dictionary/<string, object/>/>) | keys
     * type : (string) | unit type name
 	* level : (int) | unit level
 	* rarity : (int) | unit rarity
 
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
+> JSON response example
 
 ```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+"3": {
+"type": "Cleopatra",
+"rarity": 1,
+"level": 2
 }
 ```
 
-This endpoint retrieves a specific kitten.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
